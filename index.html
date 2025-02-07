@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Week, Diksha 💖</title>
+    <style>
+        /* Default (Pink Theme) */
+        :root {
+            --primary-bg: linear-gradient(to right, #ff9a9e, #fad0c4);
+            --secondary-bg: rgba(255, 255, 255, 0.2);
+            --text-color: white;
+            --heart-color: red;
+            --button-bg: red;
+        }
+
+        /* Dark Purple Theme */
+        .dark-theme {
+            --primary-bg: linear-gradient(to right, #2c003e, #5a189a);
+            --secondary-bg: rgba(255, 255, 255, 0.1);
+            --text-color: #e0aaff;
+            --heart-color: #ff79cd;
+            --button-bg: #800080;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-color);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            transition: background 0.5s ease-in-out, color 0.5s;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .day-section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            border-radius: 15px;
+            background: var(--secondary-bg);
+            transition: transform 0.5s ease-in-out, opacity 0.5s;
+            opacity: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 50px;
+            color: var(--heart-color);
+            animation: heartbeat 2s infinite;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        .heart {
+            color: var(--heart-color);
+            font-size: 2rem;
+            animation: floating 1.5s infinite alternate;
+        }
+
+        .final-message {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            padding: 30px;
+            background: var(--secondary-bg);
+            border-radius: 15px;
+        }
+
+        .together{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+       .question h2{
+            color: #ff5349;
+            font-size: 36px;
+            margin-top: -50px;
+        }
+
+        .question a{
+            color: #ff5349;
+            font-size: 20px;
+        }
+
+
+        /* Floating Hearts Animation */
+        @keyframes floating {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-10px); }
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Button */
+        .theme-switcher {
+            background: var(--button-bg);
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .theme-switcher:hover {
+            background: darkred;
+        }
+
+        .love-quote {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(-45deg);
+            margin: 100px;
+            position: relative;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 50px;
+        }
+
+
+        @keyframes heartbeat2 {
+            0% { transform: rotate(-45deg) scale(1); }
+            50% { transform: rotate(-45deg) scale(1.1); }
+            100% { transform: rotate(-45deg) scale(1); }
+        }
+
+        .beating {
+            animation: heartbeat2 1s infinite;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        /* Tooltip Text */
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 180px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            border-radius: 5px;
+
+            /* Positioning */
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Tooltip Arrow */
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        /* Show tooltip on hover */
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+      
+
+    </style>
+</head>
+<body>
+
+    <h1>💖 Happy Valentine's Week, My Love Diksha! 💖</h1>
+    <button class="theme-switcher tooltip" onclick="switchTheme()">Switch Theme
+        <span class="tooltip-text">I care your eyes! 👁️👁️</span>
+    </button>
+
+
+    <div class="container">   
+
+        <div class="day-section" id="day7">
+            <h2>🌹 Rose Day - 7th Feb</h2>
+            <p>
+                "A rose speaks of love silently, in a language known only to the heart."
+                <br/>
+                "A single rose can be my garden. Diksha, you are my entire universe."
+            </p>
+        </div>
+
+        <div class="day-section" id="day8">
+            <h2>💍 Propose Day - 8th Feb</h2>
+            <p>
+                "I don't need a special day to tell you this, but today I want to say it loud – <strong>Diksha, I love you with all my heart.</strong>"
+                <br/>
+                "Diksha, my love for you grows every moment. Will you be my forever?"
+            </p>
+        </div>
+
+        <div class="day-section" id="day9">
+            <h2>🍫 Chocolate Day - 9th Feb</h2>
+            <p>
+               "Love is like dark chocolate, bitter yet sweet."
+               <br/>
+               "You are sweeter than all the chocolates in the world. With you, every moment is pure bliss!"
+            </p>
+        </div>
+
+        <div class="day-section" id="day10">
+            <h2>🐻 Teddy Day - 10th Feb</h2>
+            <p>
+                "Holding you in my arms feels like hugging the softest teddy."
+                <br/>
+                "My love, you are my comfort and happiness."
+            </p>
+        </div>
+
+        <div class="day-section" id="day11">
+            <h2>🤝 Promise Day - 11th Feb</h2>
+            <p>
+                "I promise to love, respect, and cherish you every single day."
+                <br/>
+                "Today and forever, no matter what comes our way."
+            </p>
+        </div>
+
+        <div class="day-section" id="day12">
+            <h2>🤗 Hug Day - 12th Feb</h2>
+            <p>
+                "Every hug from you feels like a warm blanket on a cold night. I never want to let go."
+                <br/>
+                "A hug from you melts all my worries away. It's my safe place, my heaven."
+            </p>
+        </div>
+
+        <div class="day-section" id="day13">
+            <h2>💋 Kiss Day - 13th Feb</h2>
+            <p>
+                "Your lips are the sweetest touch of love. Every kiss seals my heart with yours forever."
+                <br/>
+                "Every kiss from you is like a whisper from the stars, filling my heart with magic and love."
+            </p>
+        </div>
+
+        <div class="day-section" id="day14">
+            <h2> 💕 Valentine’s Day - 14th Feb</h2>
+            <p>
+                "Diksha, you are the reason my heart beats. You are my best friend, my soulmate,my soul, my forever love."
+                <br/>
+                "I love you, Diksha!  Happy Valentine's Day, my love!"
+            </p>
+        </div>
+
+        <div class="day-section final-message">
+            <h2>💔🙏🏼 I'm Sorry & My Promise To You 🤝💕</h2>
+            <p>"My dearest Diksha,  
+            I may have hurt you unknowingly, and for that, I am truly sorry. I never want to see sadness in your eyes."
+            <br/>
+            "From this moment, I promise to always be there for you, to love you unconditionally, and to be the best version of myself for you.  
+            My life is incomplete without you. You are my heart, I will do everything to keep our love strong.</p>
+        </div>
+
+        <div class="day-section together">
+            <div class="heart beating">
+                <p style="color: white; text-align: center; z-index: 200 !important;position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%) rotate(45deg);">
+                    Together 
+                    <br/>
+                    Forever
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Will you be my Valentine ??</h2>
+                <a href="tel:+919389732668">Click Here To Answer</a>
+            </div>
+
+        </div>
+
+        <div class="day-section from">
+            <span>With love from <cite>Abhishek 🫰🏻</cite></span>
+        </div>
+
+    </div>
+
+    <script>
+        function switchTheme() {
+            document.body.classList.toggle("dark-theme");
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".day-section");
+            let delay = 300;
+            
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.style.opacity = "1";
+                    section.style.animation = "fadeIn 1s ease-in-out";
+                }, delay * (index + 1));
+            });
+        });
+    </script>
+
+</body>
+</html>
